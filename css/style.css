@@ -439,4 +439,13 @@ body {
     .facts-list {
         margin-right: 9%;   
     }
+    .text-awards {
+        display: flex;
+    }
+    .subscribe {
+        margin-top: 20%;
+    }
+    .text-awards {
+        margin-left: 220%;
+    }
 }
