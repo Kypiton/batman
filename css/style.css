@@ -1,7 +1,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
 body {
     background-color: #0A090A;
     color: white;
@@ -11,16 +10,13 @@ body {
     background-position: top center;
     background-size: 100%;
 }
-
 .container {
     /* максимальная ширина */
     max-width: 1140px;
     /* выравниваем по центру */
     margin: auto;
 }
-
 /* cтили для шапки */
-
 .header {
     /* внутренний отступ сверху */
     padding-top: 45px;
@@ -30,20 +26,17 @@ body {
     justify-content: space-between;
     margin-bottom: 30%;
 }
-
 .logo {
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 28px;
 }
-
 .search {
     display: flex;
     align-items: center;
     flex: 0.8;
 }
-
 .search-input {
     flex: 1;
     /* фоновый цвет */
@@ -63,7 +56,6 @@ body {
     font-size: 14px;
     line-height: 16px;
 }
-
 ::-webkit-input-placeholder {
     color: #AEAEAE;
   }
@@ -76,25 +68,21 @@ body {
   :-moz-placeholder { 
     color: #AEAEAE;
   }
-
 .search-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 10px 18px;
 }
-
 .bookmark {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-
 .user {
     display: flex;
     align-items: center;
 }
-
 .avatar {
     margin-left: 20px;
     width: 40px;
@@ -288,6 +276,75 @@ body {
     display: flex;
     margin-bottom: 48px;
 }
+.tabs-list {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    font-family: calibri;
+}
+.tabs-list li {
+    padding: 10px 0;
+    position: relative;
+    left: 1.5em;
+    margin-bottom: 0.75em;
+    padding-left: 1em;
+    background: #E3DEDC;
+}
+.tabs-list li:before {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 1.875em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: #FF8F27;
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    counter-increment: li;
+    content: counter(li);
+}
+.text-premiere {
+    font-weight: bold;
+    margin-left: 32%;
+}
+.text-awards {
+    font-weight: bold;
+}
+.text-sites {
+    font-weight: bold;
+}
+.facts-list {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+}
+.facts-list li {
+    position: relative;
+    margin-bottom: 1.5em;
+    border: 3px solid #CADFCF;
+    padding: 0.6em;
+    border-radius: 4px;
+    background: #FEFEFE;
+    color: #231F20;
+    font-family: "Trebuchet MS", "Lucida Sans";
+}
+.facts-list li:before {
+    position: absolute;
+    top: -0.7em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF8F27;
+    background: #FEFEFE;
+    border-radius: 50%;
+    counter-increment: li;
+    content: counter(li);
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -320,6 +377,9 @@ body {
     }
     .actros-list {
         font-size: 14px;
+    }
+    #reviews {
+        margin-right: 25%;
     }
 }
 @media (max-width: 768px) {
@@ -375,5 +435,8 @@ body {
         display: inline-block;
         width: 100%;
         margin-top: -20%;
+    }
+    .facts-list {
+        margin-right: 9%;   
     }
 }
